@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #e2f76c;
+            border-bottom: 1px solid #9cda5a;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #76bbf3;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 90%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .sitename, .contact {
+            flex: 1;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .content {
+            margin: 20px 0;
+        }
+
+        .content p {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 10px;
+        }
+
+        td {
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f16c;
+            border-top: 1px solid #d9f79b;
+            font-size: 0.8em;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="OIP - Copy.jpg" alt="chill">
+            </div>
+            <div class="sitename">CHILLFLIX BINGE AND STREAM</div>
+            <div class="contact">
+                <a href="mailto:ommsitikantha@gmail.com">Contact</a>
+            </div>
+        </header>
+        <div class="content">
+            <p>PROVIDES ENTERTAINMENT BASED ON YOUR GENRE. IT GIVES YOU PLATFORM NOT ONLY TO WATCH MOVIES OF UR GENRE BUT ALSO ENSURES LESS DATA CONSUMPTION. DOWNLOAD AVAILABLE AT 360P;720P UPON SUBSCRIPTION AT $0.49</p>
+            <form action="https://chillflix-app.vercel.app/" method="post">
+                <table>
+                    <tr>
+                        <td>NAME</td>
+                        <td><input type="text" name="name" class="form-input" placeholder="Enter your name" required></td>
+                    </tr>
+                    <tr>
+                        <td>EMAIL</td>
+                        <td><input type="email" name="email" class="form-input" placeholder="Enter your email" required></td>
+                    </tr>
+                    <tr>
+                        <td>FAVOURITE GENRE</td>
+                        <td>
+                            <input list="genres" name="genre" class="form-input" placeholder="Choose your favourite genre" required>
+                            <datalist id="genres">
+                                <option value="Action">
+                                <option value="Comedy">
+                                <option value="Drama">
+                                <option value="Fantasy">
+                                <option value="Horror">
+                                <option value="Romance">
+                                <option value="Sci-Fi">
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="subscribe"></td>
+                        <td>PROCEED WITH SUBSCRIPTION</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="submit-button">SUBMIT</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="footer">
+            <p>STREAM YOUR FAVOURITE<br>ALL RIGHTS RESERVED@chillflixskd</p>
+        </div>
+    </div>
+</body>
+</html>
